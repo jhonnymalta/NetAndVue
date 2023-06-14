@@ -1,0 +1,31 @@
+﻿<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    
+        <h2>View to vue :<span :style="blue">{{valor}}</span></h2>
+        <p :style="`color:${arrayCor[0]}`">{{ message }}</p>
+        <p>{{ativo?'status ativo':'status inativo'}}</p>  
+   
+</div>
+
+
+<script>
+    const { createApp, ref } = Vue
+
+    createApp({
+        setup() {
+            const message = ref('Hello vue!');
+            const valor = ref('FROM VUE TO VIEW!');
+            const arrayCor = ref(['blue', 'red', 'yellow']);
+            const blue = "color: blue";
+            const ativo = false;
+            return {
+                message, blue, valor, arrayCor,ativo
+
+            }
+        }
+    }).mount('#app')
+</script>
+<style>
+
+</style>

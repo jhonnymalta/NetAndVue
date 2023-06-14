@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetAndVue", "NetAndVue.csproj", "{4C564F7C-16A3-49D7-BDBB-0B8964BDAAAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C564F7C-16A3-49D7-BDBB-0B8964BDAAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C564F7C-16A3-49D7-BDBB-0B8964BDAAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C564F7C-16A3-49D7-BDBB-0B8964BDAAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C564F7C-16A3-49D7-BDBB-0B8964BDAAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93FCCECB-2BF9-4351-88EE-54DEEBC0F97D}
+	EndGlobalSection
+EndGlobal
