@@ -1,11 +1,22 @@
-﻿<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+﻿
+
 
 <div id="app">
-    
-        <h2>View to vue :<span :style="blue">{{valor}}</span></h2>
-        <p :style="`color:${arrayCor[0]}`">{{ message }}</p>
-        <p>{{ativo?'status ativo':'status inativo'}}</p>  
-   
+
+    <p>View to vue :<span :style="blue">{{valor}}</span></p>
+    <p :style="`color:${arrayCor[0]}`">{{ message }}</p>
+    <p>{{ativo?'status ativo':'status inativo'}}</p>
+    <p v-if="ativo" :style="`color:${arrayCor[0]}`">Estou ativo</p>
+    <p v-else="ativo" :style="`color:${arrayCor[1]}`">Estou Inativo</p>
+    <p v-show="ativo" :style="`color:${arrayCor[1]}`">v-show somente desabilita no html.</p>
+    <ul>
+        <li v-for="(status,index) in arrayStatus" :key="index">{{status}}</li>
+    </ul>
+    <ul>
+        <li v-for="(objeto,index) in arrayObjeto" :key="index">{{objeto.name}} - {{objeto.preco}} - {{objeto.descricao}}</li>
+    </ul>
+
+
 </div>
 
 
@@ -18,14 +29,31 @@
             const valor = ref('FROM VUE TO VIEW!');
             const arrayCor = ref(['blue', 'red', 'yellow']);
             const blue = "color: blue";
-            const ativo = false;
+            const ativo = true;
+            const arrayStatus = ref(['Concluído', 'Em Análise', 'Recusado']);
+            const arrayObjeto = ref([
+                {
+                    name: 'objeto1',
+                    preco: '2.00',
+                    descricao: 'objeto teste1'
+                },
+                {
+                    name: 'objeto2',
+                    preco: '4.00',
+                    descricao: 'objeto teste2'
+                },
+                {
+                    name: 'objeto3',
+                    preco: '6.00',
+                    descricao: 'objeto teste3'
+                },
+            ])
             return {
-                message, blue, valor, arrayCor,ativo
+                message, blue, valor, arrayCor, ativo, arrayStatus, arrayObjeto
 
             }
         }
     }).mount('#app')
 </script>
 <style>
-
 </style>
